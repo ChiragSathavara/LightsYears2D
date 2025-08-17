@@ -11,7 +11,7 @@ int main()
 
     // Create a triangle using ConvexShape
     sf::ConvexShape triangle;
-    triangle.setPointCount(3); // 👈 a triangle has 3 points
+    triangle.setPointCount(3); // a triangle has 3 points
 
     // Define the 3 corners (counter-clockwise order)
     triangle.setPoint(0, sf::Vector2f(400.f, 100.f)); // top
