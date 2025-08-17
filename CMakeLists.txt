@@ -8,10 +8,22 @@ VERSION 1.0.0
 LANGUAGES C CXX
 )
 
-set(CMAKE_CXX_REQUIRED 14)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(LIGHT_YEAR_GAME_NAME LightYearGame)
-
 add_subdirectory(LightYears)
+
+include(FetchContent)
+set(SFML_LIB_NAME SFML)
+
+FetchContent_Declare(
+${SFML_LIB_NAME}
+GIT_REPOSITORY https://github.com/SFML/SFML
+GIT_TAG 2.6.1
+GIT_SHALLOW FALSE
+)
+
+FetchContent_MakeAvailable(${SFML_LIB_NAME})
+
